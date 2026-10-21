@@ -2,8 +2,9 @@ import { MOCK_BOOKS } from '@/constants/books';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export default function BookDetail({ params }: { params: { slug: string } }) {
-  const book = MOCK_BOOKS.find(b => b.slug === params.slug);
+export default async function BookDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const book = MOCK_BOOKS.find(b => b.slug === slug);
 
   if (!book) {
     notFound();
