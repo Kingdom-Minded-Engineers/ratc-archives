@@ -9,18 +9,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
-  // Standard next-themes pattern to avoid hydration mismatch
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // We must render the provider immediately but hide the content 
+  // to avoid the "script tag" warning and hydration mismatch.
   return (
     <NextThemesProvider 
       attribute="class" 
       defaultTheme="system" 
       enableSystem
     >
-      {children}
+      <div style={{ visibility: mounted ? 'visible' : 'hidden' }}>
+        {children}
+      </div>
     </NextThemesProvider>
   );
 }
