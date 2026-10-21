@@ -45,7 +45,7 @@ export default function Home() {
       </div>
 
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white">Digital Library</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight mb-4 text-[var(--foreground)] transition-colors duration-300">Digital Library</h1>
         <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg">Access our curated collection of guides and spiritual resources.</p>
         
         <div className="relative max-w-md mx-auto">
