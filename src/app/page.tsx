@@ -26,14 +26,12 @@ function BookCard({ book }: { book: any }) {
 
   return (
     <div className="group relative h-full min-h-[450px] w-full rounded-3xl overflow-hidden transition-all hover:scale-[1.02] duration-300 shadow-lg flex flex-col">
-      {/* Main Color Block */}
       <div className={`flex-1 ${colorClass} flex items-center justify-center p-6 text-center`}>
         <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
           {centerText}
         </h2>
       </div>
 
-      {/* Bottom Content Overlay */}
       <div className="bg-slate-950/90 backdrop-blur-md p-5 border-t border-white/10">
         <span className="text-[10px] font-bold uppercase tracking-widest text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded mb-2 inline-block">
           {book.category}
@@ -76,46 +74,48 @@ export default function Home() {
   });
 
   return (
-    <main className="w-full min-h-screen bg-white dark:bg-slate-950 px-6 py-12 flex flex-col items-center">
-      <div className="w-full max-w-6xl flex justify-end mb-12">
+    <div className="w-full min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
+      <header className="w-full max-w-6xl mx-auto px-6 py-6 flex justify-end">
         <ThemeToggle />
-      </div>
+      </header>
 
-      <div className="w-full max-w-2xl text-center mb-12">
-        <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg font-medium">
-          Access our curated collection of guides and spiritual resources.
-        </p>
-        
-        <div className="relative max-w-xl mx-auto">
-          <input 
-            type="text" 
-            placeholder="Search books by title..." 
-            className="w-full px-6 py-4 pl-14 bg-slate-900 text-white border-none rounded-full shadow-2xl outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <svg className="absolute left-5 top-4.5 h-6 w-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+      <main className="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center">
+        <div className="w-full text-center mb-12">
+          <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg font-medium">
+            Access our curated collection of guides and spiritual resources.
+          </p>
+          
+          <div className="relative max-w-xl mx-auto">
+            <input 
+              type="text" 
+              placeholder="Search books by title..." 
+              className="w-full px-6 py-4 pl-14 bg-slate-900 text-white border-none rounded-full shadow-2xl outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <svg className="absolute left-5 top-4.5 h-6 w-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
         </div>
-      </div>
 
-      <div className="w-full max-w-6xl flex gap-3 justify-center mb-16 overflow-x-auto pb-2">
-        {CATEGORIES.map(cat => (
-          <button 
-            key={cat}
-            onClick={() => setActiveCat(cat)}
-            className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${activeCat === cat ? 'bg-blue-600 text-white shadow-lg' : 'bg-slate-900 text-white hover:bg-slate-800'}`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+        <div className="w-full flex gap-3 justify-center mb-16 overflow-x-auto pb-2">
+          {CATEGORIES.map(cat => (
+            <button 
+              key={cat}
+              onClick={() => setActiveCat(cat)}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${activeCat === cat ? 'bg-blue-600 text-white shadow-lg' : 'bg-slate-900 text-white hover:bg-slate-800'}`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-        {filteredBooks.map(book => (
-          <BookCard key={book.id} book={book} />
-        ))}
-      </div>
-    </main>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-12">
+          {filteredBooks.map(book => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      </main>
+    </div>
   );
 }
