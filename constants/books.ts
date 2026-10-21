@@ -15,7 +15,7 @@ export const MOCK_BOOKS: Book[] = [
     slug: '100-percent-answered-prayer',
     category: 'Prayer',
     description: 'A comprehensive guide to understanding the mechanics of answered prayer.',
-    file_url: '#',
+    file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
     cover_url: 'https://placehold.co/400x600/2563eb/ffffff?text=100%25+Prayer',
   },
   {
@@ -24,7 +24,7 @@ export const MOCK_BOOKS: Book[] = [
     slug: 'the-art-of-leadership',
     category: 'Leadership',
     description: 'Developing the mindset and skills required to lead with excellence.',
-    file_url: '#',
+    file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
     cover_url: 'https://placehold.co/400x600/0f172a/ffffff?text=Leadership',
   },
   {
@@ -33,7 +33,7 @@ export const MOCK_BOOKS: Book[] = [
     slug: 'church-growth-secrets',
     category: 'Church Growth',
     description: 'Practical steps for expanding the reach of your local ministry.',
-    file_url: '#',
+    file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
     cover_url: 'https://placehold.co/400x600/16a34a/ffffff?text=Growth',
   },
   {
@@ -42,7 +42,7 @@ export const MOCK_BOOKS: Book[] = [
     slug: 'ministerial-ethics',
     category: 'Ministry',
     description: 'Standard of conduct for those in full-time ministry.',
-    file_url: '#',
+    file_url: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
     cover_url: 'https://placehold.co/400x600/dc2626/ffffff?text=Ethics',
   },
 ];
