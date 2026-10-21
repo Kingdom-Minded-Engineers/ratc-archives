@@ -10,14 +10,16 @@
   --foreground: #0f172a;
 }
 
-/* Force the dark class to override the variables */
+/* Use the standard .dark class for the theme */
 .dark {
-  --background: #0a0a0a !important;
-  --foreground: #f8fafc !important;
+  --background: #0a0a0a;
+  --foreground: #f8fafc;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
 }

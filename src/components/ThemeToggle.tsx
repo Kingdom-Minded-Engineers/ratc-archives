@@ -10,9 +10,15 @@ export function ThemeToggle() {
 
   if (!mounted) return <div className="w-10 h-10" />;
 
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    console.log(`Switching theme from ${theme} to ${newTheme}`);
+    setTheme(newTheme);
+  };
+
   return (
     <button 
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={toggleTheme}
       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:ring-2 ring-blue-500 transition-all"
       aria-label="Toggle Theme"
     >
