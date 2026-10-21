@@ -75,20 +75,22 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen bg-white dark:bg-slate-950 transition-colors duration-300">
-      <header className="w-full max-w-6xl mx-auto px-6 py-6 flex justify-end">
+      {/* Header expanded to 2xl */}
+      <header className="w-full max-w-screen-2xl mx-auto px-6 py-6 flex justify-end">
         <ThemeToggle />
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center">
+      {/* Main expanded to 2xl */}
+      <main className="max-w-screen-2xl mx-auto px-6 py-4 flex flex-col items-center">
         <div className="w-full text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white transition-colors duration-300">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white transition-colors duration-300">
             Digital Library
           </h1>
           <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg font-medium">
             Access our curated collection of guides and spiritual resources.
           </p>
           
-          <div className="relative max-w-xl mx-auto">
+          <div className="relative max-w-2xl mx-auto">
             <input 
               type="text" 
               placeholder="Search books by title..." 
