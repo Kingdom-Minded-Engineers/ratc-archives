@@ -81,6 +81,9 @@ export default function Home() {
 
       <main className="max-w-6xl mx-auto px-6 py-4 flex flex-col items-center">
         <div className="w-full text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 dark:text-white transition-colors duration-300">
+            Digital Library
+          </h1>
           <p className="text-slate-500 dark:text-slate-400 mb-8 text-lg font-medium">
             Access our curated collection of guides and spiritual resources.
           </p>
