@@ -10,9 +10,10 @@
   --foreground: #0f172a;
 }
 
+/* Force the dark class to override the variables */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #f8fafc;
+  --background: #0a0a0a !important;
+  --foreground: #f8fafc !important;
 }
 
 body {
